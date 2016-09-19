@@ -116,7 +116,7 @@ namespace SharpVectors.Dom.Stylesheets
 		{
 			get
 			{
-				if(OwnerNode is XmlElement)
+				if(OwnerNode is XmlElement && string.IsNullOrEmpty(_Href))
 				{
                     return OwnerNode.InnerText;
 				}
