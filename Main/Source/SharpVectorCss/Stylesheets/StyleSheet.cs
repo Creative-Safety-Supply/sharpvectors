@@ -236,7 +236,7 @@ namespace SharpVectors.Dom.Stylesheets
                 Uri u = null;
                 if (ownerNode != null)
                 {
-                    if (ownerNode.BaseURI != null)
+                    if (!string.IsNullOrEmpty(ownerNode.BaseURI))
                     {
                         u = new Uri(new Uri(ownerNode.BaseURI), Href);
                     }
